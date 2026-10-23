@@ -1,0 +1,48 @@
+[project]
+name = "pdf-form-agent"
+version = "0.1.0"
+description = "Autonomous interactive PDF form agent with split-screen React frontend"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "huggingface-hub>=1.31.0",
+    "langchain>=1.4.0",
+    "langchain-ollama>=1.1.0",
+    "pydantic-settings>=2.15.0",
+    "pypdf>=6.18.1",
+    "python-multipart>=0.0.20",
+    "uvicorn>=0.53.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.25.0",
+    "reportlab>=4.2.0",
+    "ruff>=0.9.0",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes (unused imports, undefined names)
+    "I",   # isort (clean import sorting)
+    "UP",  # pyupgrade (modern Python 3.12 idioms like datetime.UTC)
+]
+ignore = [
+    "E501",  # line length handled by formatting/docstrings
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E402", "F401", "F841"]
+"tests/utils/*" = ["E701", "F841"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]

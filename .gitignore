@@ -1,0 +1,99 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Testing & linting caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.benchmarks/
+
+# IDEs, agents & editors
+.vscode/
+.idea/
+.agents/
+.claude/
+.superpowers/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Internal developer notes & memory (keep private / outside public repo)
+docs_dw/
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/node_modules/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Application logs & runtime data
+*.log
+logs/
+
+# Ephemeral runtime data & user profiles
+data/sessions/*
+!data/sessions/.gitkeep
+data/session_docs/*
+!data/session_docs/.gitkeep
+data/conversation_history/*
+!data/conversation_history/.gitkeep
+data/user_profile.*
+data/user_profile.txt
+data/**/user_profile.txt
+
+# Input PDFs (only track synthetic test forms and gitkeep)
+data/input/pdfs/*
+!data/input/pdfs/.gitkeep
+!data/input/pdfs/test_form*.pdf
+
+# Temporary media in root
+/*.png
+/*.jpg
+/*.jpeg

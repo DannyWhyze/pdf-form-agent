@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root, [data-theme="live"] {
+  color-scheme: dark;
+  --theme-bg: #141414;
+  --theme-surface: #1e1e1e;
+  --theme-raised: #282828;
+  --theme-active: #323232;
+  --theme-border: #383838;
+  --theme-border-subtle: #292929;
+  --theme-accent: #ff763b;
+  --theme-accent-hover: #ff8f5a;
+  --theme-accent-contrast: #000000;
+  --theme-secondary: #00d4d4;
+  --theme-success: #38c172;
+  --theme-success-contrast: #000000;
+  --theme-danger: #e3342f;
+  --theme-text: #e6e6e6;
+  --theme-muted: #9c9c9c;
+  --theme-dim: #707070;
+  --theme-scrollbar-track: #141414;
+  --theme-scrollbar-thumb: #383838;
+  --theme-scrollbar-thumb-hover: #4a4a4a;
+}
+
+[data-theme="paper"] {
+  color-scheme: light;
+  --theme-bg: #dfd9cc;
+  --theme-surface: #ebe7dc;
+  --theme-raised: #f4f1ea;
+  --theme-active: #ded8cb;
+  --theme-border: #b8b09f;
+  --theme-border-subtle: #cac2b2;
+  --theme-accent: #d63426;
+  --theme-accent-hover: #b82b1f;
+  --theme-accent-contrast: #ffffff;
+  --theme-secondary: #1d3557;
+  --theme-success: #2d6a4f;
+  --theme-success-contrast: #ffffff;
+  --theme-danger: #d63426;
+  --theme-text: #121212;
+  --theme-muted: #38342e;
+  --theme-dim: #5c564c;
+  --theme-scrollbar-track: #dfd9cc;
+  --theme-scrollbar-thumb: #b8b09f;
+  --theme-scrollbar-thumb-hover: #9e9584;
+}
+
+[data-theme="contrast"] {
+  color-scheme: dark;
+  --theme-bg: #000000;
+  --theme-surface: #000000;
+  --theme-raised: #121212;
+  --theme-active: #242424;
+  --theme-border: #ffffff;
+  --theme-border-subtle: #d4d4d4;
+  --theme-accent: #ffff00;
+  --theme-accent-hover: #e6e600;
+  --theme-accent-contrast: #000000;
+  --theme-secondary: #00ffff;
+  --theme-success: #00ff66;
+  --theme-success-contrast: #000000;
+  --theme-danger: #ff3333;
+  --theme-text: #ffffff;
+  --theme-muted: #e0e0e0;
+  --theme-dim: #cccccc;
+  --theme-scrollbar-track: #000000;
+  --theme-scrollbar-thumb: #ffffff;
+  --theme-scrollbar-thumb-hover: #ffff00;
+}
+
+@theme {
+  --color-app-bg: var(--theme-bg);
+  --color-app-surface: var(--theme-surface);
+  --color-app-raised: var(--theme-raised);
+  --color-app-active: var(--theme-active);
+  --color-app-border: var(--theme-border);
+  --color-app-border-subtle: var(--theme-border-subtle);
+  --color-app-accent: var(--theme-accent);
+  --color-app-accent-hover: var(--theme-accent-hover);
+  --color-app-accent-contrast: var(--theme-accent-contrast);
+  --color-app-secondary: var(--theme-secondary);
+  --color-app-success: var(--theme-success);
+  --color-app-success-contrast: var(--theme-success-contrast);
+  --color-app-danger: var(--theme-danger);
+  --color-app-text: var(--theme-text);
+  --color-app-muted: var(--theme-muted);
+  --color-app-dim: var(--theme-dim);
+
+  /* Compatibility aliases */
+  --color-ab-bg: var(--theme-bg);
+  --color-ab-surface: var(--theme-surface);
+  --color-ab-surface-raised: var(--theme-raised);
+  --color-ab-surface-active: var(--theme-active);
+  --color-ab-border: var(--theme-border);
+  --color-ab-border-subtle: var(--theme-border-subtle);
+  --color-ab-orange: var(--theme-accent);
+  --color-ab-orange-hover: var(--theme-accent-hover);
+  --color-ab-orange-dim: rgba(255, 118, 59, 0.15);
+  --color-ab-cyan: var(--theme-secondary);
+  --color-ab-green: var(--theme-success);
+  --color-ab-red: var(--theme-danger);
+  --color-ab-text: var(--theme-text);
+  --color-ab-text-muted: var(--theme-muted);
+  --color-ab-text-dim: var(--theme-dim);
+}
+
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.prose {
+  color: var(--theme-text);
+}
+.prose p, .prose span, .prose strong, .prose em, .prose li, .prose h1, .prose h2, .prose h3 {
+  color: inherit;
+}
+.prose code {
+  color: var(--theme-accent);
+}
+
+/* Utilitarian DAW Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--theme-scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-scrollbar-thumb);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-scrollbar-thumb-hover);
+}
+
+/* Flexible Accessibility Text Scaling (100% / 125% / 150%) */
+html[data-text-scale="100"] {
+  font-size: 100%;
+}
+
+html[data-text-scale="125"] {
+  font-size: 125%;
+}
+
+html[data-text-scale="150"] {
+  font-size: 150%;
+}
+
+/* High-Contrast Accessible Focus Rings */
+[data-theme="contrast"] :focus-visible {
+  outline: 2px solid #ffff00 !important;
+  outline-offset: 2px !important;
+}
